@@ -9,7 +9,7 @@ const app = express()
 
 // connect our db
 mongoose.set('strictQuery', false)
-mongoose.connect(process.env.MONGO_URL, () => console.log('DB is successfully connected'))
+mongoose.connect("mongodb+srv://LorraineA8:Lorraine123@cluster0.4iooxhk.mongodb.net/test?retryWrites=true&w=majority", () => console.log('DB is successfully connected'))
 
 // routes & middlewares
 // those two middlewares make req.body accessible, otherwise it would be undefined!!!
@@ -22,7 +22,7 @@ app.use('/product', productController)
 app.use('/upload', uploadController)
 
 // start our server
-app.listen(process.env.PORT, () => console.log('Server has been started successfully'))
+app.listen(5000, () => console.log('Server has been started successfully'))
 
 // server is on port 5000, client is on port 3000,
 // we are going to get a cors ERROR!!, but cors() removes that's error

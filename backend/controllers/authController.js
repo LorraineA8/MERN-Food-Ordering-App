@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken')
 
 // register
 authController.post('/register', async(req, res) => {
+  console.log(req.body)
     try {
       const isExisting = await User.findOne({email: req.body.email})  
       if(isExisting){
@@ -15,7 +16,7 @@ authController.post('/register', async(req, res) => {
 
       const newUser = await User.create({...req.body, password: hashedPassword})
       const {password, ...others} = newUser._doc
-      const token = jwt.sign({id: newUser._id, isAdmin: newUser.isAdmin}, process.env.JWT_SECRET, {expiresIn: '5h'})
+      const token = jwt.sign({id: newUser._id, isAdmin: newUser.isAdmin}, "this is us", {expiresIn: '5h'})
 
       return res.status(201).json({others, token})
     } catch (error) {
@@ -38,7 +39,7 @@ authController.post('/login', async(req, res) => {
        }
 
        const {password, ...others} = user._doc
-       const token = jwt.sign({id: user._id, isAdmin: user.isAdmin}, process.env.JWT_SECRET, {expiresIn: '5h'})
+       const token = jwt.sign({id: user._id, isAdmin: user.isAdmin}, "this is us", {expiresIn: '5h'})
 
        return res.status(200).json({others, token})
     } catch (error) {

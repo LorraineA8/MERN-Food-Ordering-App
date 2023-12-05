@@ -31,14 +31,14 @@ const FoodCatalog = () => {
       <div className={classes.wrapper}>
         {filteredFoods?.length !== 0 && <h2 className={classes.title}>The best {foodEndpoint} in the region</h2>}
         <div className={classes.foods}>
-          {filteredFoods.length !== 0 ? filteredFoods.map((f) => (
+          {filteredFoods.length !== 0 ? filteredFoods?.map((f) => (
             <Link to={`/food/${f._id}`} key={f._id} className={classes.food}>
               <div className={classes.imgContainer}>
                 <img src={`http://localhost:5000/images/${f?.img}`} className={classes.foodImg} />
               </div>
               <div className={classes.foodDetails}>
                 <h4 className={classes.foodTitle}>{f?.title}</h4>
-                <span className={classes.price}><span>$</span> {f?.price}</span>
+                <span className={classes.price}><span>UGX</span> {f?.price}</span>
               </div>
             </Link>
           )) : <h1 className={classes.noQuantity}>No {foodEndpoint} right now</h1>}

@@ -1,22 +1,22 @@
 import React from 'react'
 import classes from './hero.module.css'
 import {AiOutlineArrowDown} from 'react-icons/ai'
-import manEating from '../../assets/man-having-his-meal.svg'
+import homepageIcon from '../../assets/DeliveryMan2.jpeg'
 
 const Hero = () => {
   return (
     <section style={{height: '200vh'}} id="home" className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <h2 className={classes.title}>Do you crave delicious food</h2>
-          <p className={classes.firstMsg}>But going out to take <span>food costs time....</span></p>
+          <h2 className={classes.title}>Join us for a... 
+          <br/><strong className={classes.word}>Finger-lickin' good</strong> time!<br/>
+          </h2>
+          <p className={classes.firstMsg}> Where every bite is a <span>celebration of flavor.</span></p>
           <p className={classes.secondMsg}>
-            Why not order <span>pizza</span> or something <br /> <span>delicious </span>
-            from our restaurnt
+          Savor the iconic taste of <span>KFC's legendary fried chicken</span>, crafted with our secret blend of<br /><strong><span className={classes.word1}> 11 herbs </span></strong>and spices.
           </p>
           <p className={classes.desc}>
-            Our restaurant always puts the client above.
-            They are our single most important thing for our business.
+            Your Official Delivery App!!!
           </p>
           <div className={classes.buttons}>
             <button className={classes.buttonOrder}>Order now!</button>
@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
         </div>
         <div className={classes.right}>
-          <img src={manEating} alt="" className={classes.manEatingImg}/>
+          <img src={homepageIcon} alt="" className={classes.manEatingImg}/>
         </div>
       </div>
     </section>

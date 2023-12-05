@@ -6,6 +6,7 @@
     justify-content: center;
     padding-bottom: 5rem;
     margin-top: 3.5rem;
+    background-color: #faebd7;
 }
 
 .wrapper{
@@ -96,7 +97,7 @@
 
 .submitBtn{
     width: 50%;
-    background-color: #cea600;
+    background-color: #d22a2a;
     color: #fff;
     padding: 0.75rem 1.25rem;
     border-radius: 12px;

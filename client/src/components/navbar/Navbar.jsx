@@ -5,6 +5,8 @@ import {AiOutlineUser, AiOutlineShoppingCart} from 'react-icons/ai'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../redux/authSlice'
+import logo from '../../assets/KFC_logo.jpeg'
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -27,7 +29,7 @@ const Navbar = () => {
       <div className={classes.wrapper}>
         <div className={classes.left}>
           <Link to='/' className={classes.title}>
-            WebDevMania
+            <img width={116.4} src={logo} alt="" />
           </Link>
         </div>
         <div className={classes.center}>

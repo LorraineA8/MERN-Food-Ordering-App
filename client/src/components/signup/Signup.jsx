@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import classes from './signup.module.css'
-import img from '../../assets/womaneating.jpg'
+import img from '../../assets/signup3.jpeg'
 import { register } from '../../redux/authSlice'
 import { useDispatch } from 'react-redux'
 
@@ -47,9 +47,9 @@ const Signup = () => {
         <div className={classes.signUpRightSide}>
           <h2 className={classes.title}>Sign Up</h2>
           <form onSubmit={handleSignup} className={classes.signUpForm}>
-            <input type="text" placeholder="Type username" onChange={(e) => setUsername(e.target.value)}/>
-            <input type="email" placeholder="Type email" onChange={(e) => setEmail(e.target.value)}/>
-            <input type="password" placeholder="Type password"  onChange={(e) => setPassword(e.target.value)}/>
+            <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)}/>
+            <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
+            <input type="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)}/>
             <button className={classes.submitBtn}>Sign Up</button>
             <p>Already have an account? <Link to='/login'>Login</Link></p>
           </form>

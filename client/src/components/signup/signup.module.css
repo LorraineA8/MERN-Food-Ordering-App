@@ -4,17 +4,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f22a2a;
+    background-color: #E2252B;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999999;
+    z-index: 999999;    
 }
 
 .signUpWrapper{
-    border-radius: 20px;
-    width: 45vw;
-    height: 60vh;
+    border-radius: 50px;
+    width: 70vw;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,14 +55,14 @@
     overflow: hidden;
     margin-top: 2.5rem;
     flex-direction: column;
-    gap: 32px;
+    gap: 30px;
 }
 
 .signUpForm > input{
     outline: none;
     border: none;
-    border-bottom: 1px solid #333;
-    width: 50%;
+    border-bottom: 1px solid #888;
+    width: 60%;
     padding-left: 0.25rem;
     padding-bottom: 0.25rem;
     transition: 150ms all ease-in-out;
@@ -80,20 +80,20 @@
     background-color: #f22a2a;
     color: #fff;
     font-weight: 500;
-    font-size: 20px;
-    border-radius: 20px;
+    font-size: 25px;
+    border-radius: 25px;
     cursor: pointer;
 }
 
 .signUpForm > .submitBtn:hover{
-    border-color: #f22a2a;
+    border-color: #f00;
     color: #f22a2a;
     background-color: #fff;
 }
 
 .signUpForm > p{
     text-align: center;
-    color: black;
+    color: brown;
     display: flex;
     flex-direction: column;
     justify-content: center;

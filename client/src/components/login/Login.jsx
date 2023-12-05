@@ -3,7 +3,7 @@ import { useState } from 'react'
 import classes from './login.module.css'
 import {useDispatch} from 'react-redux'
 import {Link, useNavigate} from 'react-router-dom'
-import img from '../../assets/womaneating2.jpg'
+import img from '../../assets/login1.jpeg'
 import { login } from '../../redux/authSlice'
 
 const Login = () => {
@@ -47,8 +47,8 @@ const Login = () => {
         <div className={classes.loginRightSide}>
           <h2 className={classes.title}>Login</h2>
           <form onSubmit={handleLogin} className={classes.loginForm}>
-            <input type="email" placeholder='Type email' onChange={(e) => setEmail(e.target.value)}/>
-            <input type="password" placeholder='Type password' onChange={(e) => setPassword(e.target.value)}/>
+            <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
+            <input type="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)}/>
             <button className={classes.submitBtn}>Login</button>
             <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
           </form>
